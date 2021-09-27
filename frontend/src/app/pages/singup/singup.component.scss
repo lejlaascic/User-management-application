@@ -1,0 +1,39 @@
+.register {
+  position: relative;
+  min-height: 80vh;
+  padding: 30px;
+  margin: 50px 30px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 19px -2px rgba(255, 184, 0, 0.75);
+  .registar-form {
+    h1 {
+      text-align: center;
+      color: #353535;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+    .reg {
+      text-align: center;
+      margin-top: 40px;
+      .btn {
+        color: #353535;
+        border-radius: 8px;
+        background: #ffb800;
+        margin-top: 20px;
+        padding: 8px 20px;
+        font-size: 18px;
+        &:hover {
+          background: #353535;
+          color: #ffb800;
+        }
+        &:last-child {
+          margin-left: 10px;
+        }
+      }
+    }
+    label {
+      font-weight: 600;
+      color: #353535;
+    }
+  }
+}

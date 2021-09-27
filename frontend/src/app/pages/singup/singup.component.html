@@ -1,0 +1,140 @@
+<app-navbar></app-navbar>
+<!-- Register Start -->
+<div class="register">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <form [formGroup]='singupForm' (ngSubmit)='singUp()'>
+          <div class="registar-form">
+            <h1>Sing Up</h1>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label" for="f-name">First Name</label>
+                <input
+                  formControlName='firstname'
+                  type="text"
+                  class="form-control"
+                  id="first-name"
+                  placeholder="First Name"
+                  >
+                  <small *ngIf="singupForm.controls['firstname'].dirty && singupForm.hasError('required','firstname')" class="text-danger">First Name is
+                    required</small>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" for="phone">Mobile No.</label>
+                <input
+                  type="text"
+                  formControlName='mobile'
+                  class="form-control"
+                  id="phone"
+                  placeholder="Mobile No"
+                >
+                <small *ngIf="singupForm.controls['mobile'].dirty && singupForm.hasError('required','mobile')"
+                  class="text-danger">Mobil No. is
+                  required</small>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" for="l-name">Last Name</label>
+                <input
+                  type="text"
+                  formControlName='lastname'
+                  class="form-control"
+                  id="last-name"
+                  placeholder="Last Name"
+                  >
+                  <small *ngIf="singupForm.controls['lastname'].dirty && singupForm.hasError('required','lastname')"
+                    class="text-danger">Last Name is
+                    required</small>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" for="address">Address</label>
+                <input
+                  type="text"
+                  formControlName='address'
+                  class="form-control"
+                  id="address"
+                  placeholder="Address"
+                >
+                <small *ngIf="singupForm.controls['address'].dirty && singupForm.hasError('required','address')"
+                  class="text-danger">Address is
+                  required</small>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" for="email">Email</label>
+                <input
+                  type="email"
+                  formControlName='email'
+                  class="form-control"
+                  id="email"
+                  placeholder="Email"
+                 >
+                <small *ngIf="singupForm.controls['email'].dirty && singupForm.hasError('required','email')"
+                  class="text-danger">Email is
+                  required</small>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" for="city">City</label>
+                <input
+                  type="text"
+                  formControlName='city'
+                  class="form-control"
+                  id="city"
+                  placeholder="City"
+               >
+              <small *ngIf="singupForm.controls['city'].dirty && singupForm.hasError('required','city')"
+                class="text-danger">City is
+                required</small>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" for="username">Username</label>
+                <input
+                  type="text"
+                  formControlName='username'
+                  class="form-control"
+                  id="username"
+                  placeholder="Username"
+                  >
+                  <small *ngIf="singupForm.controls['username'].dirty && singupForm.hasError('required','username')"
+                    class="text-danger">Username is
+                    required</small>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" for="country">Country</label>
+                <input
+                  (keyup.enter)='singUp()'
+                  type="text"
+                  formControlName='country'
+                  class="form-control"
+                  id="country"
+                  placeholder="Country"
+                 >
+                <small *ngIf="singupForm.controls['country'].dirty && singupForm.hasError('required','country')"
+                  class="text-danger">Country is
+                  required</small>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" for="password">Password</label>
+                <input
+                  type="password"
+                  formControlName='password'
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                  >
+                  <small *ngIf="singupForm.controls['password'].dirty && singupForm.hasError('required','password')"
+                    class="text-danger">Password is
+                    required</small>
+              </div>
+              <div class="col-md-12 mb-3 reg">
+                <button  (click) ='login()' class="btn">Login</button>
+                <button [disabled]='!singupForm.valid' (click)='singUp()' class="btn">Save</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Register End -->
+<app-footer></app-footer>

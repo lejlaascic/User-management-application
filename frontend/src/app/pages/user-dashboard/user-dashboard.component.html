@@ -1,0 +1,170 @@
+<app-navbar></app-navbar>
+<!-- User Dashboard Start -->
+<div class="container mt-5">
+  <div class="dashboard">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="div col-md-12">
+          <button (click)='clickAddUser()' class="btn mb-4 p-3 add-btn">Add New User <i class="fas fa-toggle-on"></i></button>
+        </div>
+        <form [formGroup]='formValue' [hidden]="isDisplay" class="row g-3 m-3 mb-5">
+          <h3>Fill out the user entry form:</h3>
+          <div class="col-md-6 ">
+            <input
+              type="text"
+              class="form-control"
+              formControlName='firstname'
+              id="name"
+              placeholder="First Name">
+            <small *ngIf="formValue.controls['firstname'].dirty && formValue.hasError('required','firstname')"
+              class="text-danger">First Name is
+              required</small>
+          </div>
+          <div class="col-md-6  ">
+            <input
+              type="text"
+              class="form-control"
+              formControlName='lastname'
+              id='lname'
+              placeholder="Last Name">
+            <small *ngIf="formValue.controls['lastname'].dirty && formValue.hasError('required','lastname')"
+              class="text-danger">Last Name is
+              required</small>
+          </div>
+          <div class="col-md-6  ">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email"
+              formControlName='email' id="email">
+            <small *ngIf="formValue.controls['email'].dirty && formValue.hasError('required','email')"
+              class="text-danger">Email is
+              required</small>
+          </div>
+          <div class="col-md-6  ">
+            <input
+              type="text"
+              class="form-control"
+              formControlName='image'
+              placeholder="User Image">
+            <small *ngIf="formValue.controls['image'].dirty && formValue.hasError('required','image')"
+              class="text-danger">Image is
+              required</small>
+          </div>
+          <div class="col-md-4  ">
+            <input
+              type="text"
+              class="form-control"
+              formControlName='mobile'
+              placeholder="Mobile No">
+            <small *ngIf="formValue.controls['mobile'].dirty && formValue.hasError('required','mobile')"
+              class="text-danger">Mobile No. is
+              required</small>
+          </div>
+          <div class="col-md-4  ">
+            <input
+              type="text"
+              class="form-control"
+              formControlName='address'
+              placeholder="Address">
+            <small *ngIf="formValue.controls['address'].dirty && formValue.hasError('required','address')"
+              class="text-danger">Address is
+              required</small>
+          </div>
+          <div class="col-md-4  ">
+            <input
+              type="text"
+              class="form-control"
+              formControlName='city'
+              placeholder="City">
+            <small *ngIf="formValue.controls['city'].dirty && formValue.hasError('required','city')"
+              class="text-danger">City is
+              required</small>
+          </div>
+          <div class="col-md-4  ">
+            <input
+              type="text"
+              class="form-control"
+              formControlName='country'
+              placeholder="Country">
+            <small *ngIf="formValue.controls['country'].dirty && formValue.hasError('required','country')"
+              class="text-danger">Country is
+              required</small>
+          </div>
+
+
+          <div class="col-md-12 ">
+            <button (click)='clearForm()' class="btn btn-clear">Clear Form</button>
+            <button *ngIf="showAdd"  [disabled]='formValue.invalid' (click)='postUserDetails()' class="btn btn-save">Add
+              User</button>
+            <button *ngIf="showUpdate" [disabled]='formValue.invalid' (click)='updateUser()'
+              class="btn btn-update m-lg-2">Update User</button>
+          </div>
+        </form>
+      </div>
+        <div class="col-md-12 mb-4">
+          <div class="col-md-6">
+            <div class="user-search">
+              <input [(ngModel)]="firstName" name="firstName" type="text" placeholder="Enter First Name to search... "
+                (ngModelChange)='searchUser()'>
+              <button (click)='searchUser()'><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="table-responsive ">
+            <table class="table table-bordered table table-hover mb-3">
+              <thead class="thead-dark">
+                <tr>
+                  <th
+                      (click)="setOrder('id')"
+                      scope="col">User Id <i class="fa fa-sort"></i></th>
+                  <th scope="col">User Image</th>
+                  <th
+                    (click)="setOrder('firstName')"
+                     scope="col">First Name <i class="fa fa-sort"></i> </th>
+                  <th
+                    (click)="setOrder('lastName')"
+                    scope="col">Last Name <i class="fa fa-sort"></i></th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Mobile No</th>
+                  <th
+                    (click)="setOrder('address')"
+                     scope="col">Address <i class="fa fa-sort"></i></th>
+                  <th
+                    (click)="setOrder('city')"
+                     scope="col">City <i class="fa fa-sort"></i></th>
+                  <th
+                    (click)="setOrder('country')"
+                     scope="col">Country <i class="fa fa-sort"></i></th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody class="align-middle">
+                <tr *ngFor="let user of userData | orderBy: order : reverse | paginate: { itemsPerPage: 5, currentPage: page }">
+                  <th>{{user.id}}</th>
+                  <td><img [src]="user.image" alt="{{user.firstName}}" width="100"></td>
+                  <td>{{user.firstName | titlecase}}</td>
+                  <td>{{user.lastName | titlecase}}</td>
+                  <td>{{user.email}}</td>
+                  <td>{{user.mobile}}</td>
+                  <td>{{user.address | titlecase}}</td>
+                  <td>{{user.city | titlecase}}</td>
+                  <td>{{user.country | titlecase}}</td>
+                  <td class="btn-section">
+                    <button (click)='editUser(user)' class="btn btn-up "><i class="fas fa-edit"></i></button>
+                    <button (click)='delateUser(user)' class="btn btn-del ml-3"><i class="fas fa-trash-alt"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <pagination-controls (pageChange) =" page = $event"></pagination-controls>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+</div>
+<!-- User Dashboard End -->
+<app-footer></app-footer>

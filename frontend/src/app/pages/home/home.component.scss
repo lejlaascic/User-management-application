@@ -1,0 +1,11 @@
+.slider {
+  position: relative;
+  min-height: 80vh;
+  width: 100%;
+  .carousel-item {
+    height: 90vh;
+    img {
+      width: 100%;
+    }
+  }
+}

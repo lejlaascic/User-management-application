@@ -1,0 +1,21 @@
+.footer-bottom {
+  position: relative;
+  padding: 15px 0;
+  background: #353535;
+  .copyright {
+    text-align: center;
+    p {
+      color: #fff;
+      font-weight: 400;
+      margin: 0;
+      a {
+        font-weight: 600;
+        margin-left: 5px;
+        color: #ffb800;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

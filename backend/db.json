@@ -1,0 +1,131 @@
+{
+  "posts": [
+    {
+      "id": 3,
+      "firstName": "Lejla",
+      "lastName": "Ascic",
+      "email": "lejla@gmail.com",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1974&q=80",
+      "address": "Boraca Zlatista 12",
+      "mobile": "062752557",
+      "city": "Sarajevo",
+      "country": "Bosnia & Herzegovina"
+    },
+    {
+      "id": 4,
+      "firstName": "Jasmina",
+      "lastName": "Ascic",
+      "email": "jaca@gmail.com",
+      "image": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
+      "address": "marka marulica 5",
+      "mobile": "061111111",
+      "city": "sarajevo",
+      "country": "Bosnia & Herzegovina"
+    },
+    {
+      "firstName": "armin",
+      "lastName": "banjac",
+      "email": "armin@gmail.com",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
+      "address": "sutjeska br.7",
+      "mobile": "061888888",
+      "city": "zagreb",
+      "country": "Croatia",
+      "id": 5
+    },
+    {
+      "firstName": "Alaris",
+      "lastName": "Skrijelj",
+      "email": "laky@gmail.com",
+      "image": "https://images.unsplash.com/photo-1629771764761-8a910da3cebd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=685&q=80",
+      "address": "Trebevicka 74",
+      "mobile": "063456987",
+      "city": "Beograd",
+      "country": "Serbia",
+      "id": 6
+    },
+    {
+      "firstName": "Zana",
+      "lastName": "Masic",
+      "email": "zan@gmail.com",
+      "image": "https://images.unsplash.com/photo-1548834303-aefd0bb81b3c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
+      "address": "Zlatiborska 22",
+      "mobile": "066258741",
+      "city": "Mostar",
+      "country": "Bosnia and Herzegovina",
+      "id": 7
+    },
+    {
+      "firstName": "Gorana ",
+      "lastName": "markovic",
+      "email": "goga@hotmail.com",
+      "image": "https://images.unsplash.com/photo-1625689871386-70042bfbfccf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=686&q=80",
+      "address": "Alipasina 12",
+      "mobile": "033498657",
+      "city": "podgorica",
+      "country": "Montenegro",
+      "id": 8
+    },
+    {
+      "firstName": "Damir",
+      "lastName": "mirvic",
+      "email": "damir@gmail.com",
+      "image": "https://images.unsplash.com/photo-1628628572664-b8ccc4ed43c7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
+      "address": "gradacacka 33",
+      "mobile": "061458965",
+      "city": "skoplje",
+      "country": "macedonija",
+      "id": 9
+    }
+  ],
+  "singupUsers": [
+    {
+      "firstname": "Jasmina",
+      "lastname": "Ascic",
+      "email": "jaca@gmail.com",
+      "username": "jaca",
+      "password": "12345678",
+      "address": "Boraca Zlatista 12",
+      "mobile": "062752557",
+      "city": "Sarajevo",
+      "country": "Bosnia & Herzegovina",
+      "id": 4
+    },
+    {
+      "firstname": "Lejla",
+      "lastname": "Ascic",
+      "email": "lejlaascic86@gmail.com",
+      "username": "malena",
+      "password": "12345678",
+      "address": "Boraca Zlatista 12",
+      "mobile": "062752557",
+      "city": "Sarajevo",
+      "country": "Bosnia & Herzegovina",
+      "id": 5
+    },
+    {
+      "firstname": "lejla",
+      "lastname": "Ascic",
+      "email": "lejla@gmail.com",
+      "username": "malena",
+      "password": "12345678",
+      "address": "Boraca Zlatista 12",
+      "mobile": "062752557",
+      "city": "Sarajevo",
+      "country": "Bosnia & Herzegovina",
+      "id": 6
+    },
+    {
+      "firstname": "lejla",
+      "lastname": "Ascic",
+      "email": "lejla@gmail.com",
+      "username": "malena",
+      "password": "12345678",
+      "address": "Boraca Zlatista 12",
+      "mobile": "062752557",
+      "city": "Sarajevo",
+      "country": "Bosnia & Herzegovina",
+      "id": 7
+    }
+  ]
+}
